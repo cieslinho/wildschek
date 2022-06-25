@@ -17,6 +17,20 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.container {
+  margin: 0 auto;
+  padding: 0 1em;
+  width: 100%;
+  max-width: 1400px;
+}
+
+.navbar {
+  position: fixed;
+  height: 100%;
+  width: 70%;
+  background-color: red;
+}
+
 .navbar__items {
   display: -webkit-box;
   display: -ms-flexbox;

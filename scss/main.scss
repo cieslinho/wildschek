@@ -1,3 +1,5 @@
+// basic restart
+
 *,
 *::after,
 *::before {
@@ -16,9 +18,21 @@ body {
 	font-family: 'Montserrat', sans-serif;
 }
 
+// basic classess
+.container {
+	margin: 0 auto;
+	padding: 0 1em;
+	width: 100%;
+	max-width: 1400px;
+}
+
 // nav
 
 .navbar {
+	position: fixed;
+	height: 100%;
+	width: 70%;
+	background-color: red;
 	&__items {
 		display: flex;
 		align-items: center;
