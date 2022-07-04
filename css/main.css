@@ -28,7 +28,7 @@ body {
   position: fixed;
   height: 100%;
   width: 70%;
-  background-color: red;
+  background-color: #ddd;
 }
 
 .navbar__items {
@@ -42,5 +42,69 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.burger-btn {
+  display: inline-block;
+  padding: 1.2em;
+  vertical-align: middle;
+  background: transparent;
+  border: none;
+  overflow: visible;
+  cursor: pointer;
+  z-index: 1000;
+  -webkit-transition-property: opacity, -webkit-filter;
+  transition-property: opacity, -webkit-filter;
+  transition-property: opacity, filter;
+  transition-property: opacity, filter, -webkit-filter;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+
+.burger-btn__box {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 24px;
+}
+
+.burger-btn__bars, .burger-btn__bars::after, .burger-btn__bars::before {
+  display: block;
+  position: absolute;
+  right: 0;
+  height: 4px;
+  content: '';
+  background-color: #000;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+
+.burger-btn__bars {
+  top: 0px;
+  width: 100%;
+  -webkit-transition-duration: 0.275s;
+          transition-duration: 0.275s;
+  -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.burger-btn__bars::before {
+  top: 20px;
+  width: 100%;
+  -webkit-transition: -webkit-transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: -webkit-transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55), -webkit-transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.burger-btn__bars::after {
+  top: 10px;
+  width: 100%;
+  -webkit-transition: opacity 0.125s 0.275s ease;
+  transition: opacity 0.125s 0.275s ease;
 }
 /*# sourceMappingURL=main.css.map */
