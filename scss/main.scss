@@ -3,91 +3,85 @@
 *,
 *::after,
 *::before {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-	font-size: 62.5%;
-	scroll-behavior: smooth;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
-	font-size: 1.6rem;
-	font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
 }
 
 // basic classess
 .container {
-	margin: 0 auto;
-	padding: 0 1em;
-	width: 100%;
-	max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1em;
+  width: 100%;
+  max-width: 1400px;
 }
 
 // nav
 
-.navbar {
-	position: fixed;
-	height: 100%;
-	width: 70%;
-	background-color: #ddd;
-	&__items {
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-	}
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ddd;
+  z-index: 1000;
+  border-bottom: 4px solid #fff75e;
+
+  &__navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+  }
+  &__menu {
+    position: absolute;
+    top: 84px;
+    left: 0;
+    width: 70%;
+    height: calc(100vh - 80px);
+    background-color: #ddd;
+    transform: translateX(-70%);
+    transition: transform 0.3s;
+    opacity: 0;
+    z-index: 2;
+
+    &--active {
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 }
-
-.burger-btn {
-	display: inline-block;
-	padding: 1.2em;
-	vertical-align: middle;
-	background: transparent;
-	border: none;
-	overflow: visible;
-	cursor: pointer;
-	z-index: 1000;
-	transition-property: opacity, filter;
-	transition-duration: 0.15s;
-	transition-timing-function: linear;
-
-	&__box {
-		display: inline-block;
-		position: relative;
-		width: 40px;
-		height: 24px;
-	}
-
-	&__bars,
-	&__bars::after,
-	&__bars::before {
-		display: block;
-		position: absolute;
-		right: 0;
-		height: 4px;
-		content: '';
-		background-color: #000;
-		transition-property: transform;
-	}
-
-	&__bars {
-		top: 0px;
-		width: 100%;
-		transition-duration: 0.275s;
-		transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	}
-
-	&__bars::before {
-		top: 20px;
-		width: 100%;
-		transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	}
-
-	&__bars::after {
-		top: 10px;
-		width: 100%;
-		transition: opacity 0.125s 0.275s ease;
-	}
+.nav__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(000, 000, 000, 0.6);
+  backdrop-filter: blur (2px);
+  visibility: hidden;
+  transform: 0.3s;
+  transition: opacity 0.3s;
+  opacity: 0;
+  z-index: 1;
+  &--active {
+    visibility: visible;
+    opacity: 1;
+  }
 }
