@@ -34,7 +34,7 @@ body {
 	width: 100%;
 	background-color: #ddd;
 	z-index: 1000;
-	border-bottom: 4px solid #fff75e;
+	border-bottom: 4px solid #ffb72b;
 
 	&__navbar {
 		display: flex;
@@ -42,17 +42,33 @@ body {
 		justify-content: space-between;
 		height: 80px;
 	}
+
+	&__brand {
+		span {
+			font-weight: 700;
+		}
+		padding: 1.5em 0.5em;
+		font-size: 1.9rem;
+		text-decoration: none;
+		text-transform: uppercase;
+		color: #000;
+	}
+
 	&__menu {
 		position: absolute;
-		top: 84px;
+		top: 80px;
 		left: 0;
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
 		width: 70%;
 		height: calc(100vh - 80px);
-		background-color: #ddd;
 		transform: translateX(-100%);
 		transition: transform 0.3s, opacity 0.3s;
+		background-color: #ffb72b;
 		opacity: 0;
 		z-index: 2;
+		overflow-y: scroll;
 
 		&--active {
 			box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -61,10 +77,47 @@ body {
 		}
 	}
 
-	&__item {
+	&__dropdown {
+		position: absolute;
 		display: flex;
-		align-items: center;
 		flex-direction: column;
+		align-items: flex-start;
+		width: 100%;
+		transform: translateY(-100%);
+		transition: transform 0.3s, opacity 0.3s;
+		background-color: red;
+		visibility: hidden;
+		opacity: 0;
+		a {
+			list-style: none;
+		}
+
+		&--active {
+			transform: translateY(0);
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&__item {
+		border-bottom: 1px solid #000;
+		width: 100%;
+		list-style: none;
+
+		&-child {
+			margin-top: 1.5em;
+		}
+
+		a {
+			margin: 0.5em 0 0.5em 0;
+			padding: 1em 0 1em 1em;
+			display: block;
+			color: #000;
+			font-size: 1.9rem;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-weight: 700;
+		}
 	}
 }
 .nav__overlay {

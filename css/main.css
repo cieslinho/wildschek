@@ -30,7 +30,7 @@ body {
   width: 100%;
   background-color: #ddd;
   z-index: 1000;
-  border-bottom: 4px solid #fff75e;
+  border-bottom: 4px solid #ffb72b;
 }
 
 .nav__navbar {
@@ -46,21 +46,44 @@ body {
   height: 80px;
 }
 
+.nav__brand {
+  padding: 1.5em 0.5em;
+  font-size: 1.9rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.nav__brand span {
+  font-weight: 700;
+}
+
 .nav__menu {
   position: absolute;
-  top: 84px;
+  top: 80px;
   left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 70%;
   height: calc(100vh - 80px);
-  background-color: #ddd;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
   transition: opacity 0.3s, -webkit-transform 0.3s;
   transition: transform 0.3s, opacity 0.3s;
   transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+  background-color: #ffb72b;
   opacity: 0;
   z-index: 2;
+  overflow-y: scroll;
 }
 
 .nav__menu--active {
@@ -71,17 +94,60 @@ body {
   opacity: 1;
 }
 
-.nav__item {
+.nav__dropdown {
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+  background-color: red;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.nav__dropdown a {
+  list-style: none;
+}
+
+.nav__dropdown--active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav__item {
+  border-bottom: 1px solid #000;
+  width: 100%;
+  list-style: none;
+}
+
+.nav__item-child {
+  margin-top: 1.5em;
+}
+
+.nav__item a {
+  margin: 0.5em 0 0.5em 0;
+  padding: 1em 0 1em 1em;
+  display: block;
+  color: #000;
+  font-size: 1.9rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .nav__overlay {

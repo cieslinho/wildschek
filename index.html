@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@tabler/icons@latest/iconfont/tabler-icons.min.css">
     <link rel="stylesheet" href="dist/hamburgers.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="./js/main.js" defer></script>
@@ -21,16 +22,23 @@
     <div class="nav__overlay"></div>
     <nav class="nav">
         <div class="container">
+            <div class="nav__navbar">
+                <a href="#" class="nav__brand"><span>wildschek</span> polska</a>
+                <button class="hamburger hamburger--slider" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
             <ul class="nav__menu">
                 <li class="nav__item">
                     <a href="">o nas</a>
                 </li>
                 <li class="nav__item">
-                    <a href="">pompy</a>
-                    <div class="nav__trigger">
-                        <i></i>
-                    </div>
-                    <ul class="nav__child-list">
+                    <a href="" class="trigger">pompy
+                        <i class="ti ti-arrow-down"></i>
+                    </a>
+                    <ul class="nav__dropdown">
                         <li class="nav__item-child">
                             <a href="">1/4" (6mm)</a>
                         </li>
@@ -61,16 +69,7 @@
                 <li class="nav__item"><a href="">lakiery</a></li>
                 <li class="nav__item"><a href="">kontakt</a></li>
             </ul>
-            <div class="nav__navbar">
-                <a href="#" class="nav_brand">WILDSCHEK POLSKA LACKE</a>
-                <button class="hamburger hamburger--slider" type="button">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span>
-                </button>
-            </div>
         </div>
-
     </nav>
 
     <!-- header -->
