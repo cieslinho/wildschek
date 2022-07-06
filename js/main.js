@@ -16,16 +16,5 @@ const handleNav = () => {
 		})
 	})
 }
-// const trigger = document.querySelector('.nav__trigger')
-// const dropdown = document.querySelector('.nav__dropdown')
-// const allNavChildItems = document.querySelectorAll('.nav__item-child')
-// const handleDropdown = () => {
-// 	trigger.classList.toggle('nav__dropdown--active')
-// 	allNavChildItems.forEach(item => {
-// 		item.addEventListener('click', () => {
-// 			trigger.classList.remove('nav__dropdown--active')
-// 		})
-// 	})
-// }
 
 hamburger.addEventListener('click', handleNav)
