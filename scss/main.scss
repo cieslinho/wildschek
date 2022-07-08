@@ -67,7 +67,7 @@ body {
 		transition: transform 0.3s, opacity 0.3s;
 		background-color: #ffb72b;
 		opacity: 0;
-		z-index: 2;
+		z-index: 1000;
 		overflow-y: scroll;
 
 		&--active {
@@ -77,41 +77,34 @@ body {
 		}
 	}
 
-	&__dropdown {
-		position: absolute;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		width: 100%;
-		transform: translateY(-100%);
-		transition: transform 0.3s, opacity 0.3s;
-		background-color: red;
-		visibility: hidden;
-		opacity: 0;
-		a {
-			list-style: none;
-		}
-
-		&--active {
-			transform: translateY(0);
-			opacity: 1;
-			visibility: visible;
-		}
-	}
-
 	&__item {
 		border-bottom: 1px solid #000;
 		width: 100%;
 		list-style: none;
 
-		&-child {
+		&-dropdown {
+			list-style: none;
 			margin-top: 1.5em;
 		}
+	}
 
-		a {
+	&__link {
+		margin: 0.5em 0 0.5em 0;
+		padding: 1em 0 1em 1em;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		color: #000;
+		font-size: 1.9rem;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: 700;
+		&-dropdown {
 			margin: 0.5em 0 0.5em 0;
 			padding: 1em 0 1em 1em;
-			display: block;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
 			color: #000;
 			font-size: 1.9rem;
 			text-decoration: none;
@@ -119,7 +112,36 @@ body {
 			font-weight: 700;
 		}
 	}
+
+	&__dropdown-icon {
+		margin-right: 0.5em;
+		font-size: 3rem;
+		transition: 0.3s;
+	}
+
+	&__dropdown {
+		margin-left: 0.5em;
+		display: none;
+		transform: translateY(-100%);
+		transition: transform 0.3s, opacity 0.3s;
+		opacity: 0;
+
+		&--active {
+			display: block;
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
 }
+
+// .dropdown:hover > .nav__dropdown {
+// 	display: block;
+// }
+
+// .dropdown:hover .nav__dropdown-icon {
+// 	transform: rotate(180deg);
+// }
+
 .nav__overlay {
 	position: fixed;
 	top: 0;
@@ -129,7 +151,6 @@ body {
 	background: rgba(000, 000, 000, 0.6);
 	backdrop-filter: blur (2px);
 	visibility: hidden;
-	transform: 0.3s;
 	transition: opacity 0.3s;
 	opacity: 0;
 	z-index: 1;

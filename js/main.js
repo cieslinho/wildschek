@@ -1,20 +1,26 @@
-var hamburger = document.querySelector('.hamburger')
-hamburger.addEventListener('click', function () {
-	hamburger.classList.toggle('is-active')
-})
-
-const nav = document.querySelector('.nav__menu')
-const allNavItems = document.querySelectorAll('.nav__item')
+const navBtn = document.querySelector('.hamburger')
+const navMenu = document.querySelector('.nav__menu')
+const navItems = document.querySelectorAll('.nav__item')
+const navDropdown = document.querySelector('.nav__dropdown')
+const DropdownItems = document.querySelectorAll('.nav__item-dropdown')
+const trigger = document.querySelector('.trigger')
 const overlay = document.querySelector('.nav__overlay')
+
 const handleNav = () => {
-	nav.classList.toggle('nav__menu--active')
+	navMenu.classList.toggle('nav__menu--active')
 	overlay.classList.toggle('nav__overlay--active')
-	allNavItems.forEach(item => {
-		item.addEventListener('click', () => {
-			nav.classList.remove('nav__menu--active')
-			overlay.classList.remove('nav__menu--active')
-		})
-	})
 }
 
-hamburger.addEventListener('click', handleNav)
+const handleDropdown = () => {
+	navDropdown.classList.toggle('nav__dropdown--active')
+}
+
+const openBtn = () => {
+	navBtn.classList.toggle('is-active')
+}
+
+navBtn.addEventListener('click', handleNav)
+navBtn.addEventListener('click', openBtn)
+trigger.addEventListener('click', handleDropdown)
+
+// hamburger.addEventListener('click', handleNav)
