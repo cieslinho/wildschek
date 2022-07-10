@@ -22,5 +22,3 @@ const openBtn = () => {
 navBtn.addEventListener('click', handleNav)
 navBtn.addEventListener('click', openBtn)
 trigger.addEventListener('click', handleDropdown)
-
-// hamburger.addEventListener('click', handleNav)
