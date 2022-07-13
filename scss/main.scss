@@ -244,7 +244,6 @@ body {
 		box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.15);
 		background-color: #000;
 		pointer-events: none;
-		// transform: translateY(-10px);
 		transition: opacity 150ms ease-in-out;
 		list-style: none;
 		visibility: hidden;
@@ -294,7 +293,6 @@ body {
 		background-color: rgba(0, 0, 0, 0.5);
 		z-index: -10;
 	}
-	// background-color: red;
 	&__video {
 		position: absolute;
 		top: 0;
@@ -331,9 +329,6 @@ body {
 
 	&__card {
 		margin-bottom: 1em;
-		// height: 80%;
-		// max-height: 300px;
-		// width: 60%;
 		background-color: #000;
 		color: #fff;
 		text-align: center;
@@ -343,8 +338,6 @@ body {
 		&:hover &-title,
 		&:hover &-text {
 			color: #000;
-		}
-		&-body {
 		}
 	}
 }
