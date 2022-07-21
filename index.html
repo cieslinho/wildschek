@@ -13,6 +13,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/@tabler/icons@latest/iconfont/tabler-icons.min.css">
     <link rel="stylesheet" href="dist/hamburgers.css">
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"> -->
     <link rel="stylesheet" href="css/main.css">
     <script src="./js/main.js" defer></script>
 </head>
@@ -36,7 +37,7 @@
                         <a href="#aboutus" class="desktop__link">o nas</a>
                     </li>
                     <li class="desktop__item desktop__dropdown-li">
-                        <a href="#" class="desktop__link">pompy
+                        <a href="#pumps" class="desktop__link">pompy
                             <i class="ti ti-chevron-down"></i>
                         </a>
                         <ul class="desktop__dropdown">
@@ -96,7 +97,7 @@
                         <a href="#aboutus" class="nav__link">o nas</a>
                     </li>
                     <li class="nav__item dropdown-li">
-                        <a href="#" class="nav__link icon-position">pompy
+                        <a href="#pumps" class="nav__link icon-position">pompy
                             <i class="ti ti-chevron-down nav__dropdown-icon trigger"></i>
                         </a>
                         <ul class="nav__dropdown">
@@ -167,40 +168,117 @@
 
     <!-- main -->
     <main class="main">
+        <!-- section aboutus -->
         <section id="aboutus" class="aboutus">
             <div class="container">
                 <h2 class="section-title">o nas</h2>
-                <div class="aboutus__boxes">
-                    <div class="aboutus__card">
-                        <h3 class="aboutus__card-title">2007</h3>
-                        <p class="aboutus__card-text">Rozszerzyliśmy swoją działalnośc o sprzedaż pomp
-                            membranowych do zastosowań przemysłowych uznanego na całym świecie producenta pomp
-                            dwu-membranowych zasilanych spreżonym powietrzem firmy VERSAMATIC z fabryka Warren Rupp
-                            Inc z siedzibą w Cleveland Ohio Usa , należymy do najwiekszej w USA korporacji IDEX Inc
-                            skupiajacej nalepszych na swiecie producentów urzadzeń do transferu cieczy . Warren Rupp
-                            jest rowniez dostawca czesci zamiennych do pomp membranowych Wilden, ARO, YAMADA .
+                <div class="aboutus__box">
+                    <img src="./img/vmlogosvg.svg" alt="Versa-Matic Logo" class="aboutus__img">
+                    <div class="aboutus__box-text">
+                        <p class="aboutus__text">Firma Versa-Matic jest producentem przemysłowych pneumatycznych
+                            pomp
+                            membranowych. Prosta konstrukcja, niezawodność pomp przeponowych a także możliwość
+                            adaptacji większości części zamiennych do pomp Wilden czyni pompy pneumatyczne Versa-Matic
+                            bardziej użytecznymi od innych produktów na rynku. To jedne z najchętniej używanych pomp na
+                            świecie.
                         </p>
+                        <p class="aboutus__text">Oferta zawiera pneumatyczne pompy membranowe zasilane sprężonym
+                            powietrzem z zakresu od 1/4" - 3". Versa-Matic to rownież pompy pneumatyczne przeponowe:
+                        <ul class="aboutus__list">
+                            <li class="aboutus__list-item">Sanitarne 3A</li>
+                            <li class="aboutus__list-item">FDA</li>
+                            <li class="aboutus__list-item">ATEX</li>
+                            <li class="aboutus__list-item">Wysokociśnieniowe</li>
+                            <li class="aboutus__list-item">Produkcji papieru</li>
+                            <li class="aboutus__list-item">Produkcji ceramiki</li>
+                            <li class="aboutus__list-item">Górnictwa</li>
+                        </ul>
+                        <p class="aboutus__text">W najkorzystniejszych cenach na rynku oferujemy części do pomp
+                            membranowych Wilden, Aro oraz Yamada. Ponadto prowadzimy serwis naszych pomp oraz firm
+                            WILDEN.</p>
                     </div>
-                    <div class="aboutus__card">
-                        <h3 class="aboutus__card-title">2009</h3>
-                        <p class="aboutus__card-text">Jesteśmy głównym przedstawicielem marki
-                            VERSAMATIC w Polsce , do grona naszych odbiorców należą najwieksze zaklady produkcyjne
-                            we wszystkich branżach w których znajdują zastosowanie pompy pneumatyczne membranowe .
-                        </p>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- section features -->
+
+        <section id="features" class="features">
+            <div class="container">
+                <h2 class="section-title">pompy aodd zapewniają</h2>
+                <div class="features__boxes">
+                    <div class="features__card">
+                        <i class="ti ti-tool features__card-icon"></i>
+                        <p class="features__card-title">łatwość obsługi</p>
                     </div>
-                    <div class="aboutus__card">
-                        <h3 class="aboutus__card-title">2017</h3>
-                        <p class="aboutus__card-text">Podjęliśmy współprace z firma JDA Global LLC USA
-                            na zasadach wyłączności , JDA GLOBAL jest producentem części zamiennych NOMAD do pomp
-                            WILDEN , ARO , YAMADA , Dor-Oliver, Graco .. Dostarczamy części zamienne w najwyzszej
-                            jakośći i najlepszych na rynku cenach do najwiekszych zakładów produkcyjnych w Polsce .
-                        </p>
+                    <div class="features__card">
+                        <i class="ti ti-thumb-up features__card-icon"></i>
+                        <p class="features__card-title">niezawodność pracy</p>
+                    </div>
+                    <div class="features__card">
+                        <i class="ti ti-clock features__card-icon"></i>
+                        <p class="features__card-title">eliminacje przestoju</p>
+                    </div>
+                    <div class="features__card">
+                        <i class="ti ti-chart-line features__card-icon"></i>
+                        <p class="features__card-title">maksymalna wydajność</p>
+                    </div>
+                    <div class="features__card">
+                        <i class="ti ti-world features__card-icon"></i>
+                        <p class="features__card-title">globalne wsparcie techniczne</p>
                     </div>
                 </div>
         </section>
 
+        <!-- section pumps -->
+        <section id="pumps" class="pumps">
+            <div class="container">
+                <h2 class="section-title">modele pomp</h2>
+                <div class="pumps__boxes">
+                    <div class="pumps__box">
+                        <a href="e6.html" class="pumps__product">
+                            <img src="./img/pumps/e6.png" alt="pompa Versa-Matic, E6 Versa-Matic, 1/4" class="
+                            pumps__img">
+                            <p class="pumps__title">1/4" (6mm)</p>
+                            <p class="pumps__description">The ¼" (6mm) AODD pump features multiple porting position
+                                options
+                                with male and female threaded connections. This pump is available in conductive options
+                                for
+                                explosive or flammable environments.</p>
+                        </a>
+                    </div>
+                    <div class="pumps__box">
+                        <a href="e6.html" class="pumps__product">
+                            <img src="./img/pumps/e6.png" alt="pompa Versa-Matic, E6 Versa-Matic, 1/4" class="
+                            pumps__img">
+                            <p class="pumps__title">1/4" (6mm)</p>
+                            <p class="pumps__description">The ¼" (6mm) AODD pump features multiple porting position
+                                options
+                                with male and female threaded connections. This pump is available in conductive options
+                                for
+                                explosive or flammable environments.</p>
+                        </a>
+                    </div>
+                    <div class="pumps__box">
+                        <a href="e6.html" class="pumps__product">
+                            <img src="./img/pumps/e6.png" alt="pompa Versa-Matic, E6 Versa-Matic, 1/4" class="
+                            pumps__img">
+                            <p class="pumps__title">1/4" (6mm)</p>
+                            <p class="pumps__description">The ¼" (6mm) AODD pump features multiple porting position
+                                options
+                                with male and female threaded connections. This pump is available in conductive options
+                                for
+                                explosive or flammable environments.</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
+    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
 </body>
 
 </html>
