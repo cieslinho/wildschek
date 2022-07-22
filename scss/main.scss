@@ -428,11 +428,13 @@ body {
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
+		flex-wrap: wrap;
 	}
 	&__box {
 		margin-bottom: 1em;
 		padding: 1em;
-		width: 265px;
+		height: 550px;
+		width: 250px;
 	}
 
 	&__product {
@@ -440,11 +442,9 @@ body {
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
-		width: 100%;
-		height: 100%;
-		text-decoration: none;
 		color: $textColor;
 		text-align: center;
+		text-decoration: none;
 	}
 
 	&__img {
@@ -455,9 +455,14 @@ body {
 	}
 
 	&__title {
-		margin-bottom: 1.5em;
+		margin-bottom: 1em;
 		font-size: 2rem;
 		font-weight: 800;
+	}
+	&__subtitle {
+		margin-bottom: 0.9em;
+		font-size: 1.8rem;
+		font-weight: 600;
 	}
 
 	&__description {
