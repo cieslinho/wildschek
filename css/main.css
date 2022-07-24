@@ -499,8 +499,6 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: #212529;
-  -webkit-transition: color 0.45s ease, border 0.45s ease;
-  transition: color 0.45s ease, border 0.45s ease;
 }
 
 .pumps {
@@ -508,72 +506,121 @@ body {
   padding: 3em 0;
 }
 
-.pumps__boxes {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+.pumps .slide__container {
+  padding: 40px 0;
+  max-width: 1400px;
+  width: 100%;
 }
 
-.pumps__box {
-  margin-bottom: 1em;
-  padding: 1em;
-  height: 550px;
-  width: 250px;
+.pumps .slide__content {
+  margin: 0 40px;
+  overflow: hidden;
+  border-radius: 5px;
 }
 
-.pumps__product {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  color: #212529;
-  text-align: center;
+.pumps__card {
+  padding: 1em 1.5em;
   text-decoration: none;
+  color: #212529;
+  background-color: #e9ecef;
+  border-bottom: 4px solid #fdc82f;
+  border-radius: 5px;
+  -webkit-transition: background-color 0.45s ease, -webkit-transform 0.45s ease;
+  transition: background-color 0.45s ease, -webkit-transform 0.45s ease;
+  transition: transform 0.45s ease, background-color 0.45s ease;
+  transition: transform 0.45s ease, background-color 0.45s ease, -webkit-transform 0.45s ease;
+  overflow: hidden;
 }
 
-.pumps__img {
-  margin-bottom: 2em;
-  height: 200px;
-  width: 200px;
+.pumps__card:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  background-color: #fdc82f;
+}
+
+.pumps__card-imagecontent, .pumps__card-content {
+  padding: 10px 14px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pumps__card-imagecontent {
+  padding: 25px 0;
+}
+
+.pumps__card-imagebox {
+  padding: 3px;
+  height: 170px;
+  width: 170px;
+}
+
+.pumps__card-img {
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.pumps__title {
+.pumps__card-title {
   margin-bottom: 1em;
   font-size: 2rem;
   font-weight: 800;
+  text-align: center;
 }
 
-.pumps__subtitle {
+.pumps__card-subtitle {
   margin-bottom: 0.9em;
   font-size: 1.8rem;
   font-weight: 600;
+  text-align: center;
 }
 
-.pumps__description {
+.pumps__card-description {
   font-size: 1.7rem;
+  text-align: center;
+}
+
+.pumps .swiper-slide {
+  height: auto;
+}
+
+.pumps .swiper-navBtn {
+  color: #fdc82f;
+}
+
+.pumps .swiper-navBtn::before, .pumps .swiper-navBtn::after {
+  font-size: 3rem;
+}
+
+.pumps .swiper-button-next {
+  right: 0;
+}
+
+.pumps .swiper-button-prev {
+  left: 0;
+}
+
+.pumps .swiper-pagination-bullet {
+  background-color: #212529;
+  opacity: 1;
+}
+
+.pumps .swiper-pagination-bullet-active {
+  background-color: #fdc82f;
+}
+
+.markets {
+  margin: 0 auto;
+  padding: 3em 0;
 }
 
 @media (min-width: 768px) {
@@ -585,7 +632,8 @@ body {
   }
   .aboutus,
   .features,
-  .pumps {
+  .pumps,
+  .markets {
     padding: 5em 1em;
   }
 }
@@ -635,16 +683,6 @@ body {
     margin-right: 1.5em;
     height: 250px;
     width: 300px;
-  }
-  .pumps__boxes {
-    margin-top: 3em;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .pumps__box {
-    margin-right: 1.5em;
   }
 }
 
