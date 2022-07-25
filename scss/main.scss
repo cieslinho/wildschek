@@ -519,6 +519,138 @@ body {
 .markets {
 	margin: 0 auto;
 	padding: 3em 0;
+	background-color: $secondaryColor;
+	&__boxes {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	&__box {
+		position: relative;
+		margin-bottom: 1em;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		border-radius: 20px;
+		width: 250px;
+		height: 250px;
+		z-index: 20;
+		&::before {
+			position: absolute;
+			content: '';
+			width: 100%;
+			height: 100%;
+			background-color: rgba(000, 000, 000, 0.7);
+			transition: background-color 0.45s ease;
+			border-radius: 20px;
+			z-index: 0;
+		}
+		&:hover {
+			box-shadow: 0 1.5em 2.5em -0.5em rgba($textColor, 0.2);
+		}
+		&:hover::before {
+			background-color: rgba($vmColor, 0.8);
+		}
+	}
+	&__img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 20px;
+	}
+	&__title {
+		position: absolute;
+		color: $mainColor;
+		font-size: 1.8rem;
+		text-transform: uppercase;
+		transition: color 0.45s ease;
+	}
+	&__box:hover &__title {
+		color: $textColor;
+	}
+}
+
+// section contact
+
+.contact {
+	margin: 0 auto;
+	padding: 3em 0;
+	background-color: $textColor;
+	.section-title {
+		color: $mainColor;
+	}
+
+	&__boxes {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	&__box {
+		&-left {
+			margin-bottom: 2em;
+			order: 1;
+		}
+		&-middle {
+			margin-bottom: 2em;
+		}
+		&-right {
+		}
+	}
+	&__socials {
+		display: flex;
+		&-box {
+			margin: 0 1em;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		&-link {
+			display: block;
+			padding: 1em;
+			border: 1px solid rgba($vmColor, 0.6);
+			text-decoration: none;
+			transition: border-color 0.3s;
+			&:hover {
+				border-color: $vmColor;
+			}
+		}
+
+		&-icon {
+			font-size: 2rem;
+			color: rgba($vmColor, 0.6);
+			transition: color 0.3s;
+		}
+		&-link:hover &-icon {
+			color: $vmColor;
+		}
+	}
+	&__address {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		&-street {
+			margin-bottom: 1em;
+			color: $mainColor;
+			text-align: center;
+		}
+		&-info {
+			margin-bottom: 1em;
+			padding-bottom: 0.5em;
+			border-bottom: 1px solid rgba($vmColor, 0.6);
+			color: rgba($vmColor, 0.6);
+			text-align: center;
+			text-decoration: none;
+			transition: color 0.3s, border-bottom-color 0.3s;
+			&:hover {
+				border-bottom-color: $vmColor;
+				color: $vmColor;
+			}
+		}
+	}
 }
 
 // media
@@ -536,7 +668,8 @@ body {
 	.aboutus,
 	.features,
 	.pumps,
-	.markets {
+	.markets,
+	.contact {
 		padding: 5em 1em;
 	}
 }
@@ -584,6 +717,28 @@ body {
 			width: 300px;
 		}
 	}
+	.markets {
+		&__boxes {
+			margin-top: 3em;
+			flex-direction: row;
+		}
+		&__box {
+			margin-right: 1.5em;
+		}
+	}
+	.contact {
+		&__boxes {
+			margin-top: 3em;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		&__address {
+			&-street,
+			&-info {
+				text-align: start;
+			}
+		}
+	}
 }
 
 @media (min-width: 1200px) {
@@ -600,5 +755,13 @@ body {
 @media (max-width: 992px) {
 	.desktop__menu {
 		display: none;
+	}
+}
+
+@media (max-width: 1200px) {
+	.markets {
+		&__boxes {
+			flex-wrap: wrap;
+		}
 	}
 }
