@@ -92,16 +92,8 @@ body {
   height: 70px;
 }
 
-.nav__brand {
-  padding: 1.2em 0.5em;
-  font-size: 1.9rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #212529;
-}
-
-.nav__brand span {
-  font-weight: 700;
+.nav__logo {
+  height: 35px;
 }
 
 .nav__menu {
@@ -704,6 +696,11 @@ body {
   color: #212529;
 }
 
+.map iframe {
+  height: 30vh;
+  width: 100%;
+}
+
 .contact {
   margin: 0 auto;
   padding: 3em 0;
@@ -730,15 +727,22 @@ body {
           flex-direction: column;
 }
 
-.contact__box-left {
+.contact__box-socials {
   margin-bottom: 2em;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
 }
 
-.contact__box-middle {
+.contact__box-address {
   margin-bottom: 2em;
+}
+
+.contact__box-logo {
+  margin-bottom: 1em;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
 }
 
 .contact__socials {
@@ -819,6 +823,28 @@ body {
   color: #fdc82f;
 }
 
+.contact__brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact__brand-logo {
+  width: 250px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.footer {
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.footer__text {
+  padding: 1em 2em;
+  color: #212529;
+}
+
 @media (min-width: 768px) {
   .header__title {
     font-size: 5rem;
@@ -842,8 +868,8 @@ body {
   .nav__navbar {
     height: 80px;
   }
-  .nav__brand {
-    font-size: 2.3rem;
+  .nav__logo {
+    height: 60px;
   }
   .nav__overlay {
     display: none;
@@ -903,6 +929,16 @@ body {
   }
   .contact__address-street, .contact__address-info {
     text-align: start;
+  }
+  .contact__box-socials {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .contact__box-logo {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
 }
 

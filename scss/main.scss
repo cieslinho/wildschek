@@ -86,15 +86,8 @@ body {
 		height: 70px;
 	}
 
-	&__brand {
-		span {
-			font-weight: 700;
-		}
-		padding: 1.2em 0.5em;
-		font-size: 1.9rem;
-		text-decoration: none;
-		text-transform: uppercase;
-		color: $textColor;
+	&__logo {
+		height: 35px;
 	}
 
 	&__menu {
@@ -572,6 +565,14 @@ body {
 	}
 }
 
+// section map
+.map {
+	iframe {
+		height: 30vh;
+		width: 100%;
+	}
+}
+
 // section contact
 
 .contact {
@@ -589,14 +590,16 @@ body {
 		flex-direction: column;
 	}
 	&__box {
-		&-left {
+		&-socials {
 			margin-bottom: 2em;
 			order: 1;
 		}
-		&-middle {
+		&-address {
 			margin-bottom: 2em;
 		}
-		&-right {
+		&-logo {
+			margin-bottom: 1em;
+			order: 2;
 		}
 	}
 	&__socials {
@@ -651,6 +654,23 @@ body {
 			}
 		}
 	}
+	&__brand {
+		display: flex;
+		&-logo {
+			width: 250px;
+			object-fit: contain;
+		}
+	}
+}
+
+// footer
+.footer {
+	background-color: $mainColor;
+	text-align: center;
+	&__text {
+		padding: 1em 2em;
+		color: $textColor;
+	}
 }
 
 // media
@@ -682,8 +702,8 @@ body {
 		&__navbar {
 			height: 80px;
 		}
-		&__brand {
-			font-size: 2.3rem;
+		&__logo {
+			height: 60px;
 		}
 		&__overlay {
 			display: none;
@@ -736,6 +756,16 @@ body {
 			&-street,
 			&-info {
 				text-align: start;
+			}
+		}
+
+		&__box {
+			&-socials {
+				order: 2;
+			}
+
+			&-logo {
+				order: 1;
 			}
 		}
 	}
