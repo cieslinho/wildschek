@@ -527,8 +527,8 @@ body {
 		align-items: center;
 		justify-content: center;
 		border-radius: 20px;
-		width: 250px;
-		height: 250px;
+		width: 225px;
+		height: 225px;
 		z-index: 20;
 		&::before {
 			position: absolute;
@@ -590,16 +590,14 @@ body {
 		flex-direction: column;
 	}
 	&__box {
+		margin-bottom: 2em;
 		&-socials {
-			margin-bottom: 2em;
-			order: 1;
+			order: 2;
 		}
 		&-address {
-			margin-bottom: 2em;
 		}
 		&-logo {
-			margin-bottom: 1em;
-			order: 2;
+			order: -1;
 		}
 	}
 	&__socials {
@@ -636,15 +634,18 @@ body {
 		justify-content: center;
 
 		&-street {
+			padding: 0.5em 1em;
 			margin-bottom: 1em;
+			font-size: 1.6rem;
 			color: $mainColor;
 			text-align: center;
 		}
 		&-info {
+			padding: 0.5em 1em;
 			margin-bottom: 1em;
-			padding-bottom: 0.5em;
 			border-bottom: 1px solid rgba($vmColor, 0.6);
 			color: rgba($vmColor, 0.6);
+			font-size: 1.6rem;
 			text-align: center;
 			text-decoration: none;
 			transition: color 0.3s, border-bottom-color 0.3s;
@@ -661,11 +662,33 @@ body {
 			object-fit: contain;
 		}
 	}
+
+	&__links {
+		margin-bottom: 2em;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__link {
+		padding: 0.5em 1em;
+		margin-bottom: 1em;
+		font-size: 1.6rem;
+		text-transform: uppercase;
+		text-decoration: none;
+		text-align: center;
+		color: rgba($vmColor, 0.6);
+		transition: color 0.3s;
+		&:hover {
+			color: $vmColor;
+		}
+	}
 }
 
 // footer
 .footer {
-	background-color: $mainColor;
+	background-color: $vmColor;
 	text-align: center;
 	&__text {
 		padding: 1em 2em;
@@ -748,7 +771,7 @@ body {
 	}
 	.contact {
 		&__boxes {
-			margin-top: 3em;
+			margin: 3em 0 2em 0;
 			flex-direction: row;
 			justify-content: space-between;
 		}
@@ -760,6 +783,7 @@ body {
 		}
 
 		&__box {
+			margin-bottom: 0;
 			&-socials {
 				order: 2;
 			}
@@ -767,6 +791,15 @@ body {
 			&-logo {
 				order: 1;
 			}
+		}
+		&__links {
+			margin-bottom: 0;
+			flex-direction: row;
+		}
+
+		&__link {
+			padding: 0.5em 1em;
+			margin-bottom: 0;
 		}
 	}
 }
@@ -788,7 +821,7 @@ body {
 	}
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
 	.markets {
 		&__boxes {
 			flex-wrap: wrap;
