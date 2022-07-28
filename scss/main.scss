@@ -271,6 +271,7 @@ body {
 // header
 
 .header {
+	margin-top: 70px;
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -311,6 +312,14 @@ body {
 		color: $vmColor;
 	}
 }
+.pumps-header {
+	height: 40vh;
+	background-image: url('../img/header/pumps-header.webp');
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: cover;
+}
+
 // section aboutus
 .aboutus {
 	margin: 0 auto;
@@ -565,6 +574,65 @@ body {
 	}
 }
 
+// section product - pumps subpage
+
+.product {
+	margin: 0 auto;
+	padding: 3em 0;
+	&__boxes {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__img {
+		margin: 0 auto;
+		max-width: 500px;
+		width: 100%;
+	}
+	&__text:first-child {
+		margin-top: 1em;
+	}
+	&__text {
+		margin-bottom: 1em;
+		line-height: 180%;
+	}
+
+	&__list {
+		margin-bottom: 1em;
+		padding-left: 1.2em;
+		&-item {
+			position: relative;
+			margin-bottom: 0.8em;
+			padding-left: 2em;
+			list-style-type: none;
+			&::before {
+				position: absolute;
+				display: block;
+				content: '';
+				top: -2px;
+				left: 0;
+				height: 11px;
+				width: 5px;
+				border-width: 0 2px 2px 0;
+				border-style: solid;
+				border-color: $textColor;
+				transform-origin: bottom left;
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+
+// section specification - pumps subpage
+
+.specification {
+	margin: 0 auto;
+	padding: 3em 0;
+	background-color: $secondaryColor;
+}
+
 // section map
 .map {
 	iframe {
@@ -593,8 +661,6 @@ body {
 		margin-bottom: 2em;
 		&-socials {
 			order: 2;
-		}
-		&-address {
 		}
 		&-logo {
 			order: -1;
@@ -711,6 +777,8 @@ body {
 	.aboutus,
 	.features,
 	.pumps,
+	.product,
+	.specification,
 	.markets,
 	.contact {
 		padding: 5em 1em;
@@ -734,6 +802,9 @@ body {
 		&__mobile {
 			display: none;
 		}
+	}
+	.header {
+		margin-top: 80px;
 	}
 	.aboutus {
 		&__box {
@@ -769,6 +840,22 @@ body {
 			margin-right: 1.5em;
 		}
 	}
+	.product {
+		&__boxes {
+			margin-top: 3em;
+			flex-direction: row;
+			align-items: center;
+		}
+		&__img {
+			margin-top: 0;
+			margin-right: 5em;
+			max-width: 400px;
+		}
+		&__text:first-child {
+			margin-top: 0;
+		}
+	}
+
 	.contact {
 		&__boxes {
 			margin: 3em 0 2em 0;

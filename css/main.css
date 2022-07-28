@@ -305,6 +305,7 @@ body {
 }
 
 .header {
+  margin-top: 70px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -359,6 +360,14 @@ body {
 
 .header__span {
   color: #fdc82f;
+}
+
+.pumps-header {
+  height: 40vh;
+  background-image: url("../img/header/pumps-header.webp");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
 }
 
 .aboutus {
@@ -696,6 +705,77 @@ body {
   color: #212529;
 }
 
+.product {
+  margin: 0 auto;
+  padding: 3em 0;
+}
+
+.product__boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.product__img {
+  margin: 0 auto;
+  max-width: 500px;
+  width: 100%;
+}
+
+.product__text:first-child {
+  margin-top: 1em;
+}
+
+.product__text {
+  margin-bottom: 1em;
+  line-height: 180%;
+}
+
+.product__list {
+  margin-bottom: 1em;
+  padding-left: 1.2em;
+}
+
+.product__list-item {
+  position: relative;
+  margin-bottom: 0.8em;
+  padding-left: 2em;
+  list-style-type: none;
+}
+
+.product__list-item::before {
+  position: absolute;
+  display: block;
+  content: '';
+  top: -2px;
+  left: 0;
+  height: 11px;
+  width: 5px;
+  border-width: 0 2px 2px 0;
+  border-style: solid;
+  border-color: #212529;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.specification {
+  margin: 0 auto;
+  padding: 3em 0;
+  background-color: #e9ecef;
+}
+
 .map iframe {
   height: 30vh;
   width: 100%;
@@ -889,6 +969,8 @@ body {
   .aboutus,
   .features,
   .pumps,
+  .product,
+  .specification,
   .markets,
   .contact {
     padding: 5em 1em;
@@ -910,6 +992,9 @@ body {
   }
   .nav__mobile {
     display: none;
+  }
+  .header {
+    margin-top: 80px;
   }
   .aboutus__box {
     margin-top: 3em;
@@ -950,6 +1035,24 @@ body {
   }
   .markets__box {
     margin-right: 1.5em;
+  }
+  .product__boxes {
+    margin-top: 3em;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .product__img {
+    margin-top: 0;
+    margin-right: 5em;
+    max-width: 400px;
+  }
+  .product__text:first-child {
+    margin-top: 0;
   }
   .contact__boxes {
     margin: 3em 0 2em 0;
