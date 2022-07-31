@@ -705,6 +705,43 @@ body {
   color: #212529;
 }
 
+.pumps-group {
+  margin: 0 auto;
+  padding: 3em 0;
+}
+
+.pumps-group__boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pumps-group__product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .product {
   margin: 0 auto;
   padding: 3em 0;
@@ -728,7 +765,7 @@ body {
 
 .product__img {
   margin: 0 auto;
-  max-width: 500px;
+  max-width: 400px;
   width: 100%;
 }
 
@@ -774,6 +811,104 @@ body {
   margin: 0 auto;
   padding: 3em 0;
   background-color: #e9ecef;
+}
+
+.specification__boxes {
+  margin-bottom: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.specification__box {
+  margin: 0 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.specification__text {
+  margin-bottom: 1em;
+}
+
+.specification__title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #212529;
+  text-align: center;
+}
+
+.specification__img {
+  max-width: 500px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.specification .table {
+  margin-bottom: 1em;
+  max-width: 100%;
+  border: 2px solid rgba(33, 37, 41, 0.2);
+  border-collapse: collapse;
+}
+
+.specification .table__row:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.specification .table__cell {
+  padding: 0.8em;
+  color: #212529;
+}
+
+.specification__brochure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.specification__brochure-link {
+  margin-bottom: 1em;
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #cb9600;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.specification__brochure-link:hover {
+  color: #212529;
 }
 
 .map iframe {
@@ -969,6 +1104,7 @@ body {
   .aboutus,
   .features,
   .pumps,
+  .pumps-group,
   .product,
   .specification,
   .markets,
@@ -1049,10 +1185,27 @@ body {
   .product__img {
     margin-top: 0;
     margin-right: 5em;
-    max-width: 400px;
   }
   .product__text:first-child {
     margin-top: 0;
+  }
+  .specification__boxes {
+    margin-top: 3em;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .specification__box {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .specification .table {
+    margin-bottom: 0;
   }
   .contact__boxes {
     margin: 3em 0 2em 0;

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind:wght@700&family=Montserrat:wght@300;400;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@tabler/icons@latest/iconfont/tabler-icons.min.css">
+    <link rel="stylesheet" href="dist/hamburgers.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <script src="./js/main.js" defer></script>
+</head>
+
+<body>
+
+    <!-- nav -->
+
+    <div class="nav__overlay"></div>
+    <nav class="nav">
+        <div class="container">
+            <div class="nav__navbar">
+                <a href="index.html" class="nav__brand">
+                    <img src="./img/wildscheklogo.png" alt="Versa-Matic Logo, Wildschek Logo" class="nav__logo">
+                </a>
+                <button class="hamburger hamburger--slider" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+                <ul class="desktop__menu">
+                    <li class="desktop__item">
+                        <a href="index.html#aboutus" class="desktop__link">o nas</a>
+                    </li>
+                    <li class="desktop__item desktop__dropdown-li">
+                        <a href="index.html#pumps" class="desktop__link">pompy
+                            <i class="ti ti-chevron-down"></i>
+                        </a>
+                        <ul class="desktop__dropdown">
+                            <li class="desktop__item-dropdown">
+                                <a href="e6-aodd-pumps.html" class="desktop__link-dropdown">1/4" (6mm)</a>
+                            </li>
+                            <li class="desktop__item-dropdown">
+                                <a href="e8.html" class="desktop__link-dropdown">3/8" (10mm)</a>
+                            </li>
+                            <li class="desktop__item-dropdown">
+                                <a href="e5.html" class="desktop__link-dropdown">1/2" (13mm)</a>
+                            </li>
+                            <li class="desktop__item-dropdown">
+                                <a href="e7.html" class="desktop__link-dropdown">3/4" (19mm)</a>
+                            </li>
+                            <li class="desktop__item-dropdown">
+                                <a href="e1.html" class="desktop__link-dropdown">1" (25mm)</a>
+                            </li>
+                            <li class="desktop__item-dropdown">
+                                <a href="e4.html" class="desktop__link-dropdown">1 1/2" (38mm)</a>
+                            </li>
+                            <li class="desktop__item-dropdown">
+                                <a href="e2.html" class="desktop__link-dropdown">2" (51mm)</a>
+                            </li>
+                            <li class="desktop__item-dropdown">
+                                <a href="e3.html" class="desktop__link-dropdown">3" (76mm)</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="desktop__item desktop__dropdown-li">
+                        <a href="index.html#markets" class="desktop__link">przeznaczenie
+                            <i class="ti ti-chevron-down"></i>
+                        </a>
+                        <ul class="desktop__dropdown">
+                            <li class="desktop__item-dropdown">
+                                <a href="#" class="desktop__link-dropdown">fda</a>
+                            </li>
+                            <li class="desktop__item-dropdown">
+                                <a href="#" class="desktop__link-dropdown">higieniczne</a>
+                            </li>
+                            <li class="desktop__item-dropdown">
+                                <a href="#" class="desktop__link-dropdown">wysokiego ciśnienia</a>
+                            </li>
+                            <li class="desktop__item-dropdown">
+                                <a href="#" class="desktop__link-dropdown">obsługa dużych ciał stałych</a>
+                            </li>
+                            <li class="desktop__item-dropdown">
+                                <a href="#" class="desktop__link-dropdown">pompy wirowe</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="desktop__item">
+                        <a href="parts.html" class="desktop__link">części</a>
+                    </li>
+                    <li class="desktop__item">
+                        <a href="#contact" class="desktop__link">kontakt</a>
+                    </li>
+                </ul>
+                <ul class="nav__menu nav__mobile">
+                    <li class="nav__item">
+                        <a href="index.html#aboutus" class="nav__link">o nas</a>
+                    </li>
+                    <li class="nav__item dropdown-li">
+                        <a href="index.html#pumps" class="nav__link icon-position">pompy
+                            <i class="ti ti-chevron-down nav__dropdown-icon trigger"></i>
+                        </a>
+                        <ul class="nav__dropdown">
+                            <li class="nav__item-dropdown">
+                                <a href="e6-aodd-pumps.html" class="nav__link-dropdown">1/4" (6mm)</a>
+                            </li>
+                            <li class="nav__item-dropdown">
+                                <a href="e8.html" class="nav__link-dropdown">3/8" (10mm)</a>
+                            </li>
+                            <li class="nav__item-dropdown">
+                                <a href="e5.html" class="nav__link-dropdown">1/2" (13mm)</a>
+                            </li>
+                            <li class="nav__item-dropdown">
+                                <a href="e7.html" class="nav__link-dropdown">3/4" (19mm)</a>
+                            </li>
+                            <li class="nav__item-dropdown">
+                                <a href="e1.html" class="nav__link-dropdown">1" (25mm)</a>
+                            </li>
+                            <li class="nav__item-dropdown">
+                                <a href="e4.html" class="nav__link-dropdown">1 1/2" (38mm)</a>
+                            </li>
+                            <li class="nav__item-dropdown">
+                                <a href="e2.html" class="nav__link-dropdown">2" (51mm)</a>
+                            </li>
+                            <li class="nav__item-dropdown">
+                                <a href="e3.html" class="nav__link-dropdown">3" (76mm)</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav__item dropdown-li">
+                        <a href="index.html#markets" class="nav__link icon-position">przeznaczenie
+                            <i class="ti ti-chevron-down nav__dropdown-icon trigger-second"></i>
+                        </a>
+                        <ul class="nav__dropdown-second">
+                            <li class="nav__item-dropdown">
+                                <a href="#" class="nav__link-dropdown">fda</a>
+                            </li>
+                            <li class="nav__item-dropdown">
+                                <a href="#" class="nav__link-dropdown">higieniczne</a>
+                            </li>
+                            <li class="nav__item-dropdown">
+                                <a href="#" class="nav__link-dropdown">wysokiego ciśnienia</a>
+                            </li>
+                            <li class="nav__item-dropdown">
+                                <a href="#" class="nav__link-dropdown">obsługa dużych ciał stałych</a>
+                            </li>
+                            <li class="nav__item-dropdown">
+                                <a href="#" class="nav__link-dropdown">pompy wirowe</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav__item"><a href="parts.html" class="nav__link">części</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">kontakt</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- header -->
+    <header class="header pumps-header">
+        <h1 class="header__title">POMPY AODD</h1>
+    </header>
+
+
+
+
+    <!-- main -->
+    <main class="main">
+
+        <section class="pumps-group">
+            <div class="container">
+                <h2 class="section-title">1/4" (6mm)</h2>
+                <div class="pumps-group__boxes">
+                    <p class="pumps-group__description">Versamatic’s ¼" (6mm) air-operated double-diaphragm (AODD) pumps
+                        were engineered with original equipment manufacturers (OEMs) in mind and provide tremendous
+                        system flexibility. The ¼" is one of the quietest and most compact AODD pumps in its class.</p>
+                    <div class="pumps-group__productBox">
+                        <a href="./e6-plastic-bolted.html" class="pumps-group__product">
+                            <img src="./img/pumps/e6group.png" alt="" class="pumps-group__image">
+                            <p class="pumps-group__title">¼" BOLTED PLASTIC AODD PUMP</p>
+                            <p class="pumps-group__productDescription">The ¼" (6mm) AODD pump features multiple porting
+                                position options with male and female threaded connections. This pump is available in
+                                conductive options for explosive or flammable environments.</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- section map -->
+
+        <section class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2529.394021916585!2d17.93233681588925!3d50.65694438034508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47105378b40a688f%3A0xce9f11e6632408c3!2sWildschek%20Polska%20Lacke%20s.c.!5e0!3m2!1spl!2spl!4v1658832898143!5m2!1spl!2spl"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+
+
+        <!-- section contact -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact__boxes">
+                    <div class="contact__box contact__box-socials">
+                        <div class="contact__socials">
+                            <div class="contact__socials-box">
+                                <a href="https://www.facebook.com/Pompy.Pneumatyczne.VersaMatic/"
+                                    class="contact__socials-link">
+                                    <i class="ti ti-brand-facebook contact__socials-icon"></i>
+                                </a>
+                            </div>
+                            <div class="contact__socials-box">
+                                <a href="https://twitter.com/Versamatic1" class="contact__socials-link">
+                                    <i class="ti ti-brand-twitter contact__socials-icon"></i>
+                                </a>
+                            </div>
+                            <div class="contact__socials-box">
+                                <a href="https://www.youtube.com/user/VersaMaticPumps" class="contact__socials-link">
+                                    <i class="ti ti-brand-youtube contact__socials-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact__box contact__box-address">
+                        <div class="contact__address">
+                            <p class="contact__address-street">Torowa 4, 45-951 Opole</p>
+                            <a class="contact__address-info"
+                                href="mailto:mciesla@versamatic.com.pl">mciesla@versamatic.com.pl</a>
+                            <a class="contact__address-info" href="tel:+48-512-208-904">+48 512 208 904</a>
+                        </div>
+                    </div>
+                    <div class="contact__box contact__box-logo">
+                        <a href="index.html" class="contact__brand">
+                            <img src="./img/wildscheklogowhite.png" alt="Versa-Matic Logo, Versa-Matic brand"
+                                class="contact__brand-logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="contact__links">
+                    <a href="index.html#aboutus" class="contact__link">o nas</a>
+                    <a href="index.html#pumps" class="contact__link">pompy</a>
+                    <a href="index.html#markets" class="contact__link">przeznaczenie</a>
+                    <a href="parts.html" class="contact__link">części</a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p class="footer__text">&copy; 2022 | Szymon Cieśla</p>
+        </footer>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/swipersettings.js"></script>
+</body>
+
+</html>
