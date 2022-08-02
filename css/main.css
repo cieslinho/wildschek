@@ -405,6 +405,7 @@ body {
   margin-bottom: 0.8em;
   padding-left: 2em;
   list-style-type: none;
+  color: #212529;
 }
 
 .aboutus__list-item::before {
@@ -427,6 +428,7 @@ body {
 .aboutus__text {
   margin-bottom: 1em;
   line-height: 180%;
+  color: #212529;
 }
 
 .features {
@@ -710,7 +712,13 @@ body {
   padding: 3em 0;
 }
 
-.pumps-group__boxes {
+.pumps-group__description {
+  margin-bottom: 1em;
+  color: #212529;
+  line-height: 180%;
+}
+
+.pumps-group__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -724,6 +732,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.pumps-group__productBox {
+  max-width: 350px;
+  padding: 1em;
 }
 
 .pumps-group__product {
@@ -740,6 +753,27 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  color: #212529;
+}
+
+.pumps-group__product:hover {
+  color: #fdc82f;
+}
+
+.pumps-group__img {
+  margin-bottom: 2em;
+  max-width: 250px;
+  width: 100%;
+}
+
+.pumps-group__title {
+  margin-bottom: 2em;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .product {
@@ -776,6 +810,7 @@ body {
 .product__text {
   margin-bottom: 1em;
   line-height: 180%;
+  color: #212529;
 }
 
 .product__list {
@@ -788,6 +823,7 @@ body {
   margin-bottom: 0.8em;
   padding-left: 2em;
   list-style-type: none;
+  color: #212529;
 }
 
 .product__list-item::before {
@@ -1171,6 +1207,18 @@ body {
   }
   .markets__box {
     margin-right: 1.5em;
+  }
+  .pumps-group__description {
+    margin-top: 3em;
+  }
+  .pumps-group__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .product__boxes {
     margin-top: 3em;

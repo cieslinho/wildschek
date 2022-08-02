@@ -346,6 +346,7 @@ body {
 			margin-bottom: 0.8em;
 			padding-left: 2em;
 			list-style-type: none;
+			color: $textColor;
 			&::before {
 				position: absolute;
 				display: block;
@@ -366,6 +367,7 @@ body {
 	&__text {
 		margin-bottom: 1em;
 		line-height: 180%;
+		color: $textColor;
 	}
 }
 
@@ -579,19 +581,46 @@ body {
 .pumps-group {
 	margin: 0 auto;
 	padding: 3em 0;
-	&__boxes {
+	&__description {
+		margin-bottom: 1em;
+		color: $textColor;
+		line-height: 180%;
+	}
+
+	&__container {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 	}
+
 	&__productBox {
+		max-width: 350px;
+		padding: 1em;
 	}
 	&__product {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		text-decoration: none;
+		text-align: center;
+		transition: color 0.3s;
+		color: $textColor;
+		&:hover {
+			color: $vmColor;
+		}
+	}
+
+	&__img {
+		margin-bottom: 2em;
+		max-width: 250px;
+		width: 100%;
+	}
+	&__title {
+		margin-bottom: 2em;
+		font-weight: 700;
+		text-transform: uppercase;
 	}
 }
 
@@ -618,6 +647,7 @@ body {
 	&__text {
 		margin-bottom: 1em;
 		line-height: 180%;
+		color: $textColor;
 	}
 
 	&__list {
@@ -628,6 +658,7 @@ body {
 			margin-bottom: 0.8em;
 			padding-left: 2em;
 			list-style-type: none;
+			color: $textColor;
 			&::before {
 				position: absolute;
 				display: block;
@@ -922,6 +953,17 @@ body {
 			margin-right: 1.5em;
 		}
 	}
+
+	.pumps-group {
+		&__description {
+			margin-top: 3em;
+		}
+		&__container {
+			flex-direction: row;
+			justify-content: flex-start;
+		}
+	}
+
 	.product {
 		&__boxes {
 			margin-top: 3em;
