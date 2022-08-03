@@ -121,13 +121,20 @@ body {
 		}
 	}
 
+	.icon-box {
+		position: absolute;
+		right: 5%;
+		top: 0;
+		padding: 0.4em;
+	}
+
 	&__link {
 		display: block;
 		padding: 0.5em 0.5em;
 		margin: 0 1em;
 		color: $textColor;
 		border-bottom: 2px solid rgba(0, 0, 0, 0.5);
-		font-size: 1.7rem;
+		font-size: 1.5rem;
 		text-decoration: none;
 		text-transform: uppercase;
 		transition: color 0.1s, background-color 0.1s;
@@ -142,7 +149,7 @@ body {
 			margin: 0 1.5em;
 			color: $textColor;
 			border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-			font-size: 1.5rem;
+			font-size: 1.4rem;
 			text-decoration: none;
 			text-transform: uppercase;
 			transition: color 0.1s, background-color 0.1s;
@@ -162,7 +169,7 @@ body {
 	&__dropdown-icon {
 		padding: 0.3em;
 		margin-right: 0.2em;
-		font-size: 2.5rem;
+		font-size: 2rem;
 	}
 
 	.dropdown-li {
